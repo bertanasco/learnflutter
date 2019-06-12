@@ -1,29 +1,25 @@
 import 'package:flutter/material.dart';
 
-import 'category.dart';
 import 'category_route.dart';
 
-final List<Widget> _categories = [
-  CategoryWidget(
-      categoryIcon: Icons.cake, iconColor: Colors.redAccent, text: "Reload"),
-  CategoryWidget(
-      categoryIcon: Icons.access_time,
-      iconColor: Colors.redAccent,
-      text: "Custom Widget"),
-  CategoryWidget(
-      categoryIcon: Icons.add_location,
-      iconColor: Colors.redAccent,
-      text: "Yo mama")
-];
-
 void main() => runApp(MaterialApp(
-    debugShowCheckedModeBanner: false, title: "Converter", home: HomeApp()));
+    color: Colors.green[100],
+    debugShowCheckedModeBanner: false,
+    title: "Converter",
+    home: HomeApp()));
 
 class HomeApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body:  CategoryRoute()
-    );
+        backgroundColor: Colors.green[100],
+        appBar: AppBar(
+            backgroundColor: Colors.green[100],
+            title: Text(
+              "Unit Converter",
+              style: TextStyle(fontSize: 30,color: Colors.black),
+            ),
+            elevation: 0.0),
+        body: CategoryRoute());
   }
 }
