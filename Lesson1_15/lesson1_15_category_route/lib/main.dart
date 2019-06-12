@@ -4,7 +4,7 @@ import 'category.dart';
 
 void main() => runApp(
     CategoryWidget(
-    categoryIcon: Icons.add_a_photo,
-    iconColor: Colors.redAccent,
-    text: "Cake"
-));
+        categoryIcon: Icons.add_a_photo,
+        iconColor: Colors.redAccent,
+        text: "Cake"
+    ));
