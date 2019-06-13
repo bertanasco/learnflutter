@@ -1,32 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:lesson1_15_category_route/screens/unit_screen.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 
 import 'category.dart';
 
 class CategoryRoute extends StatelessWidget {
-  final List _categories = [
-    CategoryWidget(
-        categoryIcon: Icons.pets, iconColor: Colors.redAccent, text: "Animals"),
-    CategoryWidget(
-        categoryIcon: Icons.airplanemode_active,
-        iconColor: Colors.redAccent,
-        text: "Vehicles"),
-    CategoryWidget(
-        categoryIcon: Icons.star, iconColor: Colors.redAccent, text: "Shapes"),
-    CategoryWidget(
-        categoryIcon: Icons.add_location,
-        iconColor: Colors.redAccent,
-        text: "TODO"),
-    CategoryWidget(
-        categoryIcon: Icons.ac_unit, iconColor: Colors.redAccent, text: "TODO"),
-    CategoryWidget(
-        categoryIcon: Icons.add_location,
-        iconColor: Colors.redAccent,
-        text: "Yo mama"),
-    CategoryWidget(
-        categoryIcon: Icons.add_location,
-        iconColor: Colors.redAccent,
-        text: "Yo mama")
-  ];
 
   static const _categoryNames = <String>[
     'Length',
@@ -50,28 +28,34 @@ class CategoryRoute extends StatelessWidget {
     Colors.red,
   ];
 
+  static const _icons = <IconData>[
+    Icons.straighten,
+    Icons.cake,
+    Icons.cake,
+    Icons.cake,
+    Icons.cake,
+    Icons.cake,
+    Icons.cake,
+    Icons.cake,
+  ];
+
   @override
   Widget build(BuildContext context) {
     return _buildCategoryWidgets(true);
   }
 
   Widget _buildCategoryWidgets(bool portrait) {
-    if (portrait) {
       return ListView.builder(
         itemBuilder: (BuildContext context, int index) {
           return CategoryWidget(
-              categoryIcon: Icons.pets,
-              iconColor: _baseColors[index],
+              categoryIcon: _icons[index],
+              routeToScreen: Unit(
+                categoryName: _categoryNames[index],
+                backgroundColor: _baseColors[index],
+              ),
               text: _categoryNames[index]);
         },
-        itemCount: _categories.length,
+        itemCount: _icons.length,
       );
-    } else {
-      return GridView.count(
-        crossAxisCount: 2,
-        childAspectRatio: 3.0,
-        children: _categories,
-      );
-    }
   }
 }

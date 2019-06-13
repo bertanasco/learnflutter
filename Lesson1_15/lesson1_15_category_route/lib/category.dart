@@ -1,12 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tts/flutter_tts.dart';
+
 
 class CategoryWidget extends StatelessWidget {
+ 
   final IconData categoryIcon;
+  final Widget routeToScreen;
   final Color iconColor;
   final String text;
   final double _height = 100.0;
 
-  const CategoryWidget({Key key, this.categoryIcon, this.iconColor, this.text})
+  const CategoryWidget(
+      {Key key,
+      this.categoryIcon,
+      this.iconColor,
+      this.text,
+      this.routeToScreen})
       : super(key: key);
 
   @override
@@ -21,7 +30,11 @@ class CategoryWidget extends StatelessWidget {
                     textDirection: TextDirection.ltr,
                     child: InkWell(
                         onTap: () {
-                          print("Yo inkwell");
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => this.routeToScreen),
+                          );
                         },
                         child: Row(
                           children: <Widget>[

@@ -1,5 +1,5 @@
-name: lesson1_15_category_route
-description: A new Flutter project.
+name: i_am_rich
+description: I am rich project
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -23,7 +23,6 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
-  flutter_tts:
 
 dev_dependencies:
   flutter_test:
