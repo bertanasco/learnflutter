@@ -11,34 +11,19 @@ class App extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
             children: <Widget>[
-              Container(
-                height: double.infinity,
-                width: 100,
-                color: Colors.redAccent[200],
+              CircleAvatar(
+                radius: 50,
+                backgroundImage: AssetImage("images/avatar.jpg"),
               ),
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Container(
-                      color: Colors.yellow,
-                      width: 100,
-                      height: 100,
-                    ),
-                    Container(
-                      height: 100,
-                      width: 100,
-                      color: Colors.green,
-                    ),
-                  ],
+              Text(
+                "Bert Añasco",
+                style: TextStyle(
+                  fontSize: 40,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
                 ),
-              ),
-              Container(
-                color: Colors.blue[300],
-                width: 100,
               ),
             ],
           ),
