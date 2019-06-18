@@ -36,53 +36,40 @@ class App extends StatelessWidget {
                   fontFamily: "SourceSansPro",
                 ),
               ),
-              Container(
+              Card(
                 color: Colors.white,
-                padding: EdgeInsets.all(10.0),
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
                   horizontal: 10.0,
                 ),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.phone,
-                      color: Colors.teal,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      "+ 63 917 59247576",
-                      style: TextStyle(color: Colors.black),
-                    ),
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.center,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    "+ 63 917 5924756",
+                    style: TextStyle(color: Colors.black),
+                  ),
                 ),
               ),
-              Container(
+              Card(
                 color: Colors.white,
-                padding: EdgeInsets.all(10.0),
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
                   horizontal: 10.0,
                 ),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.mail,
-                      color: Colors.teal,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      "bertanasco@gmail.com",
-                      style: TextStyle(color: Colors.black),
-                    ),
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.center,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.mail,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    "bertanasco@gmail.com",
+                    style: TextStyle(color: Colors.black),
+                  ),
                 ),
+                //mainAxisAlignment: MainAxisAlignment.center,
               ),
             ],
           ),
